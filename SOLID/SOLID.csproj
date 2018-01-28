@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AreaOperations.cs" />
     <Compile Include="EquilateralTriangle.cs" />
+    <Compile Include="GreatCalculator.cs" />
     <Compile Include="IGeometricShape.cs" />
     <Compile Include="IHasArea.cs" />
     <Compile Include="IHasPerimeter.cs" />

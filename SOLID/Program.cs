@@ -8,27 +8,15 @@ namespace SOLID
 {
     class Program
     {
+     
         static void Main(string[] args)
         {
-            var rectangulos = new[] {
-                new Rectangle { Width = 10, Height = 5 },
-                new Rectangle { Width = 4, Height = 6 }
-            };
+            GreatCalculator calculator = new GreatCalculator();
+            calculator.Calculate();
 
-            AreaOperations operacionesArea = new AreaOperations();
-            PerimeterOperations operacionesPerimetro = new PerimeterOperations();
-
-            var sumaAreas = operacionesArea.Sum(rectangulos);
-            var sumaPerimetros = operacionesPerimetro.Sum(rectangulos);
-
-            Console.WriteLine("Suma de areas: " + sumaAreas);
-            Console.WriteLine("Suma de perimetros: " + sumaPerimetros);
-            
-            // Provando el principio Liskov
-            Square cuadrado = new Square();
-            cuadrado.SideLength = 12;
-            Console.WriteLine(cuadrado.Area());
-
+            Console.WriteLine("Suma de areas: " + calculator.TotalAreas);
+            Console.WriteLine("Suma de perimetros: " + calculator.TotalPerimeters);
+           
             Console.ReadKey();
         }
     }
