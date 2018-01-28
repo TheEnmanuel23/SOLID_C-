@@ -8,11 +8,11 @@ namespace SOLID
 {
     public class AreaOperations
     {
-        public double Sum (IEnumerable<Rectangle> rectangles)
+        public double Sum (IEnumerable<IGeometricShape> shapes)
         {
             double area = 0;
-            foreach (var rectangle in rectangles)
-                area += rectangle.Height * rectangle.Width;
+            foreach (var shape in shapes)
+                area += shape.Area();
 
             return area;
         } 

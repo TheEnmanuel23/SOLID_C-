@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SOLID
 {
-    public class Rectangle
+    public class Rectangle : IGeometricShape
     {
         private double slides = 4;
         public double Sides { 
@@ -14,5 +14,15 @@ namespace SOLID
         }
         public double Height { get; set; }
         public double Width { get; set; }
+
+        public double Area()
+        {
+            return Height * Width;
+        }
+
+        public double Perimeter()
+        {
+            return Height * 2 + Width * 2;
+        }
     }
 }

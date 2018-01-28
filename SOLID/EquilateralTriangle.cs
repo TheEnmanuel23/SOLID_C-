@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SOLID
 {
-    public class EquilateralTriangle
+    public class EquilateralTriangle : IGeometricShape
     {
         private double slides = 4;
         public double Sides
@@ -14,5 +14,15 @@ namespace SOLID
             get { return this.slides; }
         }
         public double SideLength { get; set; }
+
+        public double Area()
+        {
+            return Math.Sqrt(3) * Math.Pow(SideLength, 2) / 4;
+        }
+
+        public double Perimeter()
+        {
+            return SideLength * 3;
+        }
     }
 }
