@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AreaOperations.cs" />
+    <Compile Include="EquilateralTriangle.cs" />
     <Compile Include="PerimeterOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -8,12 +8,18 @@ namespace SOLID
 {
     public class PerimeterOperations
     {
-        public double Sum (IEnumerable<Rectangle> rectangles)
+        public double Sum (IEnumerable<object> shapes)
         {
-            double parameter = 0;
-            foreach (var rectangle in rectangles)
-                parameter += 2 * rectangle.Height + 2 * rectangle.Width;
-            return parameter;
+            double perimeter = 0;
+            foreach (var shape in shapes)
+            {
+                if (shape is Rectangle)
+                    perimeter += 2 * ((Rectangle)shape).Height + 2 * ((Rectangle)shape).Width;
+                else if (shape is EquilateralTriangle)
+                    perimeter += ((EquilateralTriangle)shape).SideLength * 3;
+            }
+               
+            return perimeter;
         }
     }
 }
