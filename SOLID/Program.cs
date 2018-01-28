@@ -23,6 +23,11 @@ namespace SOLID
 
             Console.WriteLine("Suma de areas: " + sumaAreas);
             Console.WriteLine("Suma de perimetros: " + sumaPerimetros);
+            
+            // Provando SIN el principio Liskov
+            Rectangle cuadrado = new Square();
+            cuadrado.Height = 12;
+            Console.WriteLine(cuadrado.Area());
 
             Console.ReadKey();
         }

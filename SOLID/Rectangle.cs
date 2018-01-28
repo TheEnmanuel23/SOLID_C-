@@ -12,8 +12,8 @@ namespace SOLID
         public double Sides { 
             get { return this.slides; } 
         }
-        public double Height { get; set; }
-        public double Width { get; set; }
+        public virtual double Height { get; set; }
+        public virtual double Width { get; set; }
 
         public double Area()
         {
