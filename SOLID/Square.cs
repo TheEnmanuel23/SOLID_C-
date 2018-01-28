@@ -6,29 +6,22 @@ using System.Threading.Tasks;
 
 namespace SOLID
 {
-    public class Square : Rectangle
+    public class Square : IGeometricShape
     {
-        private double _height;
-        private double _width;
-
-        public override double Height
+        private double slides = 4;
+        public double Sides
         {
-            get { return _height; }
-            set
-            {
-                _height = value;
-                _width = value;
-            }
+            get { return this.slides; }
+        }
+        public double SideLength { get; set; }
+        public double Area()
+        {
+            return SideLength * SideLength;
         }
 
-        public override double Width
+        public double Perimeter()
         {
-            get { return _width; }
-            set
-            {
-                _height = value;
-                _width = value;
-            }
+            return SideLength * 4;
         }
     }
 }
