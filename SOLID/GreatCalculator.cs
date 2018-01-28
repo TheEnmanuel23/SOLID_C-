@@ -11,21 +11,13 @@ namespace SOLID
         public double TotalAreas { get; private set; }
         public double TotalPerimeters { get; private set; }
 
-        public void Calculate()
+        public void Calculate(IEnumerable<IGeometricShape> shapes)
         {
-            var figuras = new IGeometricShape[] {
-                new Rectangle { Width = 10, Height = 5 },
-                new EquilateralTriangle { SideLength = 10 },
-                new Square { SideLength = 20 },
-                new Rectangle { Width = 3, Height = 1 },
-                new Square { SideLength = 32 }
-            };
+            var areaOperations = new AreaOperations();
+            var perimeterOperations = new PerimeterOperations();
 
-            var operacionesArea = new AreaOperations();
-            var operacionesPerimetro = new PerimeterOperations();
-
-            TotalAreas = operacionesArea.Sum(figuras);
-            TotalPerimeters = operacionesPerimetro.Sum(figuras);
+            TotalAreas = areaOperations.Sum(shapes);
+            TotalPerimeters = perimeterOperations.Sum(shapes);
         }
     }
 }
