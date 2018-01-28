@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SOLID
 {
-    public interface IGeometricShape : IHasArea, IHasPerimeter
-    {  
+    public interface IHasPerimeter
+    {
+        double Perimeter();
     }
 }
